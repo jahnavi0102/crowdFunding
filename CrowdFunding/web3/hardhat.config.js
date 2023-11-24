@@ -1,10 +1,13 @@
 require("@matterlabs/hardhat-zksync-solc");
+require('dotenv').config();
+
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   zksolc: {
     version: "1.3.9",
     compilerSource: "binary",
+    defaultNetwork: 'goerli',
     settings: {
       optimizer: {
         enabled: true,
@@ -12,6 +15,11 @@ module.exports = {
     },
   },
   networks: {
+    hardhat: {},
+    goerli: {
+      url: 'https://rpc.ankr.com/eth_sepolia',
+      accounts: [`0x${process.env.PRIVATE_KEY}`]
+    },
     zksync_testnet: {
       url: "https://zksync2-testnet.zksync.dev",
       ethNetwork: "goerli",

@@ -1,0 +1,21 @@
+#web
+/web3/node_modules
+/web3/.env
+/web3/cache-zk/
+/web3/artifacts-zk/
+
+coverage
+coverage.json
+typechain
+typechain-types
+
+#Hardhat files
+cache*
+artifacts*
+
+#client
+/Client/thirdweb-app/node_modules
+
+
+/node_modules
+
