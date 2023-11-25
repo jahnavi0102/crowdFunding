@@ -1,4 +1,4 @@
-import { adamsitsWheeze, bouquet, cat, horse, snail, well } from './assets';
+import { adamsitsWheeze, bouquet, cat, horse, snail, well } from '../assets';
 
 export const navlinks = [
   {
